@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Slide from './Slide.js';
 
@@ -27,12 +27,12 @@ const slides = [
             }
         ],
         colors: [
-            "D81027",
-            "1280A8",
-            "D18326",
-            "E7CA2C",
-            "1AAD5A",
-            "957247"
+            "#D81027",
+            "#1280A8",
+            "#D18326",
+            "#E7CA2C",
+            "#1AAD5A",
+            "#957247"
         ]
     },
     {
@@ -63,9 +63,9 @@ const slides = [
             }
         ],
         colors: [
-            "77AEDE",
-            "F5B42C",
-            "751F0A"
+            "#77AEDE",
+            "#F5B42C",
+            "#751F0A"
         ]
     },
     {
@@ -96,9 +96,9 @@ const slides = [
             }
         ],
         colors: [
-            "159B3D",
-            "FDDE32",
-            "032575"
+            "#159B3D",
+            "#FDDE32",
+            "#032575"
         ]
     },
     {
@@ -133,9 +133,9 @@ const slides = [
             }
         ],
         colors: [
-            "159B3D",
-            "FDDE32",
-            "032575"
+            "#159B3D",
+            "#FDDE32",
+            "#032575"
         ]
     },
     {
@@ -162,14 +162,14 @@ const slides = [
             }
         ],
         colors: [
-            "0B6846",
-            "CD1028",
-            "8F4420",
-            "9DA26B",
-            "F8C0C9",
-            "38C4DB",
-            "F7C849",
-            "148488"
+            "#0B6846",
+            "#CD1028",
+            "#8F4420",
+            "#9DA26B",
+            "#F8C0C9",
+            "#38C4DB",
+            "#F7C849",
+            "#148488"
         ]
     },
     {
@@ -196,11 +196,11 @@ const slides = [
             }
         ],
         colors: [
-            "095392",
-            "D11036",
-            "E9C02B",
-            "159A4E",
-            "1792DE"
+            "#095392",
+            "#D11036",
+            "#E9C02B",
+            "#159A4E",
+            "#1792DE"
         ]
     },
     {
@@ -210,11 +210,17 @@ const slides = [
             name: 'Venezuela',
             latLng: [6.423750, -66.589729]
         },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Raquel_Prado',
+            publications: [
+
+            ]
+        },
         colors: [
-            "FECC2F",
-            "03237C",
-            "CE132D",
-            "1F6427"
+            "#FECC2F",
+            "#03237C",
+            "#CE132D",
+            "#1F6427"
         ]
     },
     {
@@ -224,11 +230,17 @@ const slides = [
             name: 'Venezuela',
             latLng: [6.423750, -66.589729]
         },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Gustavo_Ponce',
+            publications: [
+
+            ]
+        },
         colors: [
-            "FECC2F",
-            "03237C",
-            "CE132D",
-            "1F6427"
+            "#FECC2F",
+            "#03237C",
+            "#CE132D",
+            "#1F6427"
         ]
     },
     {
@@ -238,10 +250,16 @@ const slides = [
             name: 'Colombia',
             latLng: [4.570868, -74.297333]
         },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Tatiana_Toro',
+            publications: [
+
+            ]
+        },
         colors: [
-            "FBD133",
-            "063892",
-            "CD1028"
+            "#FBD133",
+            "#063892",
+            "#CD1028"
         ]
     },
     {
@@ -251,10 +269,16 @@ const slides = [
             name: 'Manizales, Colombia',
             latLng: [5.070275, -75.513817]
         },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Jos%C3%A9_F._Escobar',
+            publications: [
+
+            ]
+        },
         colors: [
-            "FBD133",
-            "063892",
-            "CD1028"
+            "#FBD133",
+            "#063892",
+            "#CD1028"
         ]
     },
     {
@@ -264,9 +288,15 @@ const slides = [
             name: 'Cuba',
             latLng: [21.521757, -77.781166]
         },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Miriam_Leiva',
+            publications: [
+
+            ]
+        },
         colors: [
-            "042A8E",
-            "CE132D"
+            "#042A8E",
+            "#CE132D"
         ]
     },
     {
@@ -276,9 +306,15 @@ const slides = [
             name: 'Havana, Cuba',
             latLng: [23.113592, -82.366592]
         },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Argelia_Velez-Rodriguez',
+            publications: [
+
+            ]
+        },
         colors: [
-            "042A8E",
-            "CE132D"
+            "#042A8E",
+            "#CE132D"
         ]
     }
 ]
@@ -287,9 +323,47 @@ export default function App() {
 
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
+    function getPrevSlideIndex() {
+        if(currentSlideIndex === 0) {
+            return (slides.length - 1);
+        } else {
+            return (currentSlideIndex - 1);
+        }
+    }
+
+    function getNextSlideIndex() {
+        return ((currentSlideIndex + 1) % slides.length);
+    }
+
+    function onPrevSlide() {
+        setCurrentSlideIndex(getPrevSlideIndex())
+    }
+
+    function onNextSlide() {
+        setCurrentSlideIndex(getNextSlideIndex());
+    }
+
+    useEffect(() => {
+        const handleKeydown = (event) => {
+            if(event.code === 'ArrowLeft') {
+                onPrevSlide();
+            } else if(event.code === 'ArrowRight') {
+                onNextSlide();
+            }
+        }
+        document.addEventListener("keydown", handleKeydown);
+        return () => {
+            document.removeEventListener("keydown", handleKeydown);
+        };
+    });
+
     return (
         <div className="app">
-            {slides.map((d, i) => (<Slide d={d} hidden={currentSlideIndex !== i} />))}
+            <Slide 
+                d={slides[currentSlideIndex]} 
+                onPrevSlide={onPrevSlide}
+                onNextSlide={onNextSlide}
+            />
         </div>
     );
 }

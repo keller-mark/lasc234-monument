@@ -1,12 +1,16 @@
 .slide {
     box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     .main {
         box-sizing: border-box;
-        height: 90vh;
+        height: 85vh;
     }
     .footer {
         box-sizing: border-box;
-        height: 10vh;
+        height: 15vh;
 
         .name {
             
