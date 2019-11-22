@@ -1,5 +1,4 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react';
 
 import Slide from './Slide.js';
 
@@ -26,6 +25,14 @@ const slides = [
                 word: 'manifolds',
                 wikipedia: 'https://en.wikipedia.org/wiki/Manifold'
             }
+        ],
+        colors: [
+            "D81027",
+            "1280A8",
+            "D18326",
+            "E7CA2C",
+            "1AAD5A",
+            "957247"
         ]
     },
     {
@@ -54,6 +61,11 @@ const slides = [
                 word: 'regression',
                 wikipedia: 'https://en.wikipedia.org/wiki/Regression_analysis'
             }
+        ],
+        colors: [
+            "77AEDE",
+            "F5B42C",
+            "751F0A"
         ]
     },
     {
@@ -82,16 +94,202 @@ const slides = [
                 word: 'NP-completeness',
                 wikipedia: 'https://en.wikipedia.org/wiki/P_versus_NP_problem'
             }
+        ],
+        colors: [
+            "159B3D",
+            "FDDE32",
+            "032575"
+        ]
+    },
+    {
+        name: 'Marília Chaves Peixoto',
+        birthYear: 1921,
+        birthPlace: {
+            name: 'Rio de Janeiro, Brazil',
+            latLng: [-22.906847, -43.172897]
+        },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Mar%C3%ADlia_Chaves_Peixoto',
+            publications: [
+                ''
+            ]
+        },
+        keywords: [
+            {
+                word: 'dynamical systems',
+                wikipedia: ''
+            },
+            {
+                word: 'convex functions',
+                wikipedia: ''
+            },
+            {
+                word: 'planes',
+                wikipedia: ''
+            },
+            {
+                word: 'saddle points',
+                wikipedia: ''
+            }
+        ],
+        colors: [
+            "159B3D",
+            "FDDE32",
+            "032575"
+        ]
+    },
+    {
+        name: 'Santiago López de Medrano',
+        birthYear: 1942,
+        birthPlace: {
+            name: 'Mexico City, Mexico',
+            latLng: [19.432608, -99.133209]
+        },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Santiago_L%C3%B3pez_de_Medrano',
+            publications: [
+                ''
+            ]
+        },
+        keywords: [
+            {
+                word: 'knot theory',
+                wikipedia: ''
+            },
+            {
+                word: 'differential topology',
+                wikipedia: ''
+            }
+        ],
+        colors: [
+            "0B6846",
+            "CD1028",
+            "8F4420",
+            "9DA26B",
+            "F8C0C9",
+            "38C4DB",
+            "F7C849",
+            "148488"
+        ]
+    },
+    {
+        name: 'Carmen Miró',
+        birthYear: 1919,
+        birthPlace: {
+            name: 'Panama',
+            latLng: [8.537981, -80.782127]
+        },
+        links: {
+            wikipedia: 'https://en.wikipedia.org/wiki/Carmen_A._Mir%C3%B3',
+            publications: [
+                ''
+            ]
+        },
+        keywords: [
+            {
+                word: 'statistics',
+                wikipedia: 'https://en.wikipedia.org/wiki/Statistics'
+            },
+            {
+                word: 'demography',
+                wikipedia: 'https://en.wikipedia.org/wiki/Demography'
+            }
+        ],
+        colors: [
+            "095392",
+            "D11036",
+            "E9C02B",
+            "159A4E",
+            "1792DE"
+        ]
+    },
+    {
+        name: 'Raquel Prado',
+        birthYear: 1970,
+        birthPlace: {
+            name: 'Venezuela',
+            latLng: [6.423750, -66.589729]
+        },
+        colors: [
+            "FECC2F",
+            "03237C",
+            "CE132D",
+            "1F6427"
+        ]
+    },
+    {
+        name: 'Gustavo Ponce',
+        birthYear: 1952,
+        birthPlace: {
+            name: 'Venezuela',
+            latLng: [6.423750, -66.589729]
+        },
+        colors: [
+            "FECC2F",
+            "03237C",
+            "CE132D",
+            "1F6427"
+        ]
+    },
+    {
+        name: 'Tatiana Toro',
+        birthYear: 1964,
+        birthPlace: {
+            name: 'Colombia',
+            latLng: [4.570868, -74.297333]
+        },
+        colors: [
+            "FBD133",
+            "063892",
+            "CD1028"
+        ]
+    },
+    {
+        name: 'José Escobar',
+        birthYear: 1954,
+        birthPlace: {
+            name: 'Manizales, Colombia',
+            latLng: [5.070275, -75.513817]
+        },
+        colors: [
+            "FBD133",
+            "063892",
+            "CD1028"
+        ]
+    },
+    {
+        name: 'Miriam Leiva',
+        birthYear: undefined,
+        birthPlace: {
+            name: 'Cuba',
+            latLng: [21.521757, -77.781166]
+        },
+        colors: [
+            "042A8E",
+            "CE132D"
+        ]
+    },
+    {
+        name: 'Argelia Velez-Rodriguez',
+        birthYear: 1936,
+        birthPlace: {
+            name: 'Havana, Cuba',
+            latLng: [23.113592, -82.366592]
+        },
+        colors: [
+            "042A8E",
+            "CE132D"
         ]
     }
 ]
 
-function App() {
+export default function App() {
+
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
     return (
         <div className="app">
-            {slides.map(d => (<Slide d={d} />))}
+            {slides.map((d, i) => (<Slide d={d} hidden={currentSlideIndex !== i} />))}
         </div>
     );
 }
-
-export default App;
