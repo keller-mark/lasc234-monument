@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Slide from './Slide.js';
+import VectorFieldSlide from './slides/VectorFieldSlide.js';
 
 const slides = [
     {
@@ -33,7 +34,8 @@ const slides = [
             "#E7CA2C",
             "#1AAD5A",
             "#957247"
-        ]
+        ],
+        slide: VectorFieldSlide
     },
     {
         name: 'Graciela Boente',

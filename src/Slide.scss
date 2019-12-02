@@ -4,9 +4,15 @@
     top: 0;
     left: 0;
     width: 100%;
+    .header {
+        height: 5vh;
+        .keyword {
+            display: inline-block;
+        }
+    }
     .main {
         box-sizing: border-box;
-        height: 85vh;
+        height: 80vh;
     }
     .footer {
         box-sizing: border-box;
@@ -17,3 +23,4 @@
         }
     }
 }
+
