@@ -6,6 +6,7 @@ import { setupCanvas, teardownCanvas } from './helpers.js';
 
 const startYear = 1960;
 const endYear = 2018;
+// Data from https://data.worldbank.org/indicator/SP.POP.TOTL?locations=VE
 const population = [
     8141841,
     8439261,

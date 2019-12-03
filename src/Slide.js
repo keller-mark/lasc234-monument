@@ -29,6 +29,8 @@ export default function Slide(props) {
 
     const colors = getRandomColors(d.colors);
 
+    const pubLink = d.links.publications[0];
+
     return (
         <div className="slide h-screen">
             <div className="header" style={{backgroundColor: colors.bgPrimary, color: colors.textPrimary}}>
@@ -50,9 +52,22 @@ export default function Slide(props) {
                     <button onClick={onPrevSlide}>&lt;</button>
                     <a className="name inline-block m-4 lg:text-4xl md:text-3xl text-2xl" href={d.links.wikipedia} target="_blank">{ d.name }</a>
                     <button onClick={onNextSlide}>&gt;</button>
+                    <br/>
+                    <a 
+                        href={(pubLink.startsWith('http') ? pubLink : `http://doi.org/${pubLink}`)} 
+                        target="_blank"
+                    >Publications</a>
                 </div>
                 <div className="my-2 mx-4 inline-block float-right">
-                    { `Born ${(d.birthYear ? d.birthYear : '')} in ${d.birthPlace.name}` } 
+                    { `Born ${(d.birthYear ? d.birthYear : '')} in ${d.birthPlace.name}` }
+                    <br/><br/><br/>
+                    <a 
+                        href="https://github.com/keller-mark/lasc234-monument" 
+                        target="_blank" 
+                        className="block" 
+                        style={{textAlign: 'right'}}
+                    >Code</a>
+                    
                 </div>
             </div>
         </div>

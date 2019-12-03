@@ -123,7 +123,7 @@ const slides = [
         links: {
             wikipedia: 'https://en.wikipedia.org/wiki/Mar%C3%ADlia_Chaves_Peixoto',
             publications: [
-                ''
+                'https://projecteuclid.org/euclid.bams/1183513889'
             ]
         },
         keywords: [
@@ -162,7 +162,7 @@ const slides = [
         links: {
             wikipedia: 'https://en.wikipedia.org/wiki/Carmen_A._Mir%C3%B3',
             publications: [
-                ''
+                'https://repositorio.cepal.org/handle/11362/3125'
             ]
         },
         keywords: [
@@ -195,7 +195,7 @@ const slides = [
         links: {
             wikipedia: 'https://en.wikipedia.org/wiki/Raquel_Prado',
             publications: [
-
+                '10.1016/S1388-2457(99)00165-0'
             ]
         },
         keywords: [
@@ -217,7 +217,7 @@ const slides = [
         ],
         slide: TimeSeriesSlide
     },
-    {
+    /*{
         name: 'Argelia Velez-Rodriguez',
         birthYear: 1936,
         birthPlace: {
@@ -241,12 +241,12 @@ const slides = [
             "#042A8E",
             "#CE132D"
         ]
-    }
+    }*/
 ]
 
 export default function App() {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(5);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
     function getPrevSlideIndex() {
         if(currentSlideIndex === 0) {

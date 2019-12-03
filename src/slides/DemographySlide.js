@@ -4,6 +4,7 @@ import { range } from 'lodash';
 const numPeople = Math.floor(Math.random()*20)+1;
 const positions = range(numPeople).map(() => [Math.random()*500, Math.random()*800]);
 
+// SVG from https://en.wikipedia.org/wiki/File:Stick_Figure.svg
 const stickFigureG = (<g transform="scale(0.4)">
     <g transform="translate(-258.38235,-359.68572)">
         <path
