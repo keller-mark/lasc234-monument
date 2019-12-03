@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Slide from './Slide.js';
 import VectorFieldSlide from './slides/VectorFieldSlide.js';
+import PCASlide from './slides/PCASlide.js';
 
 const slides = [
     {
@@ -70,7 +71,8 @@ const slides = [
             "#77AEDE",
             "#F5B42C",
             "#751F0A"
-        ]
+        ],
+        slide: PCASlide
     },
     {
         name: 'Newton da Costa',
@@ -325,7 +327,7 @@ const slides = [
 
 export default function App() {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
 
     function getPrevSlideIndex() {
         if(currentSlideIndex === 0) {

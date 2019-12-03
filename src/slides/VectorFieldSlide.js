@@ -8,10 +8,12 @@ function draw(context, colors, width, height, xn, yn, x, y, px, py) {
     // Clear canvas
     context.clearRect(0, 0, width, height);
 
-    // Draw y axis
     context.strokeStyle = colors.textPrimary;
     context.fillStyle = colors.textPrimary;
+    
     const axisWidth = 3;
+
+    // Draw y axis
     context.rect(width / 2 - axisWidth / 2, 0, axisWidth, height);
     context.fill();
 
