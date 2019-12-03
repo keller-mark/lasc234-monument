@@ -1,4 +1,4 @@
-
+import { select as d3_select } from 'd3-selection';
 
 /**
  * Get the retina ratio to be able to scale up a canvas context.
@@ -30,5 +30,13 @@ export function setupCanvas(canvasRef) {
     canvas.setAttribute("height", scaledHeight);
     context.scale(ratio, ratio);
 
-    return { canvas, context, width: canvas.clientWidth, height: canvas.clientHeight };
+    const canvasSelection = d3_select(canvas);
+
+    return { canvas, canvasSelection, context, width: canvas.clientWidth, height: canvas.clientHeight };
+}
+
+export function teardownCanvas(canvasRef) {
+    const canvas = canvasRef.current;
+    const canvasSelection = d3_select(canvas);
+    canvasSelection.on("mousemove", null);
 }

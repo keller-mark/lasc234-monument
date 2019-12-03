@@ -31,7 +31,13 @@ export default function Slide(props) {
         <div className="slide h-screen">
             <div className="header" style={{backgroundColor: colors.bgPrimary, color: colors.textPrimary}}>
                 {d.keywords ? (d.keywords.map(k => (
-                    <a className="keyword p-2 text-lg" href={k.wikipedia} target="_blank" style={{color: colors.textPrimary}} key={k.word}>{k.word}</a>
+                    <a 
+                        className="keyword p-2 text-lg" 
+                        href={k.wikipedia} 
+                        target="_blank" 
+                        style={{color: colors.textPrimary, fontWeight: (k.bold ? 'bold' : 'normal')}} 
+                        key={k.word}
+                    >{k.word}</a>
                 ))) : null}
             </div>
             <div className="main" style={{backgroundColor: colors.bgPrimary}}>

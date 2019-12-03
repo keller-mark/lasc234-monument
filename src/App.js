@@ -20,6 +20,7 @@ const slides = [
         keywords: [
             {
                 word: 'vector fields',
+                bold: true,
                 wikipedia: 'https://en.wikipedia.org/wiki/Vector_field'
             },
             {
@@ -57,6 +58,7 @@ const slides = [
             },
             {
                 word: 'principal component analysis',
+                bold: true,
                 wikipedia: 'https://en.wikipedia.org/wiki/Principal_component_analysis'
             },
             {
