@@ -26,6 +26,19 @@
                 padding: 2px 4px;
             }
         }
+        .demography-guess {
+            text-align: center;
+            color: white;
+            position: absolute;
+            left: 25%;
+            width: 50%;
+            top: 70%;
+            input {
+                color: black;
+                padding: 4px;
+                border-radius: 4px;
+            }
+        }
     }
     .footer {
         box-sizing: border-box;

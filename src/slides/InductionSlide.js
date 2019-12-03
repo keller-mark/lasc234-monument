@@ -33,7 +33,7 @@ export default function InductionSlide(props) {
     }
 
     function resetStep() {
-        setCurrStep(0);
+        setCurrStep(1);
     }
 
     return (

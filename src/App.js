@@ -5,6 +5,8 @@ import VectorFieldSlide from './slides/VectorFieldSlide.js';
 import PCASlide from './slides/PCASlide.js';
 import InductionSlide from './slides/InductionSlide.js';
 
+import DemographySlide from './slides/DemographySlide.js';
+
 const slides = [
     {
         name: 'César Camacho',
@@ -126,60 +128,27 @@ const slides = [
         keywords: [
             {
                 word: 'dynamical systems',
-                wikipedia: ''
+                wikipedia: 'https://en.wikipedia.org/wiki/Dynamical_system'
             },
             {
                 word: 'convex functions',
-                wikipedia: ''
+                bold: true,
+                wikipedia: 'https://en.wikipedia.org/wiki/Convex_function'
             },
             {
                 word: 'planes',
-                wikipedia: ''
+                wikipedia: 'https://en.wikipedia.org/wiki/Plane_(geometry)'
             },
             {
                 word: 'saddle points',
-                wikipedia: ''
+                wikipedia: 'https://en.wikipedia.org/wiki/Saddle_point'
             }
         ],
         colors: [
             "#FDDE32",
             "#159B3D",
             "#032575"
-        ]
-    },
-    {
-        name: 'Santiago López de Medrano',
-        birthYear: 1942,
-        birthPlace: {
-            name: 'Mexico City, Mexico',
-            latLng: [19.432608, -99.133209]
-        },
-        links: {
-            wikipedia: 'https://en.wikipedia.org/wiki/Santiago_L%C3%B3pez_de_Medrano',
-            publications: [
-                ''
-            ]
-        },
-        keywords: [
-            {
-                word: 'knot theory',
-                wikipedia: ''
-            },
-            {
-                word: 'differential topology',
-                wikipedia: ''
-            }
         ],
-        colors: [
-            "#0B6846",
-            "#CD1028",
-            "#8F4420",
-            "#9DA26B",
-            "#F8C0C9",
-            "#38C4DB",
-            "#F7C849",
-            "#148488"
-        ]
     },
     {
         name: 'Carmen Miró',
@@ -201,6 +170,7 @@ const slides = [
             },
             {
                 word: 'demography',
+                bold: true,
                 wikipedia: 'https://en.wikipedia.org/wiki/Demography'
             }
         ],
@@ -210,7 +180,8 @@ const slides = [
             "#E9C02B",
             "#159A4E",
             "#1792DE"
-        ]
+        ],
+        slide: DemographySlide
     },
     {
         name: 'Raquel Prado',
@@ -225,87 +196,22 @@ const slides = [
 
             ]
         },
+        keywords: [
+            {
+                word: 'time series data',
+                bold: true,
+                wikipedia: 'https://en.wikipedia.org/wiki/Time_series'
+            },
+            {
+                word: 'Bayesian inference',
+                wikipedia: 'https://en.wikipedia.org/wiki/Bayesian_inference'
+            }
+        ],
         colors: [
             "#FECC2F",
             "#03237C",
             "#CE132D",
             "#1F6427"
-        ]
-    },
-    {
-        name: 'Gustavo Ponce',
-        birthYear: 1952,
-        birthPlace: {
-            name: 'Venezuela',
-            latLng: [6.423750, -66.589729]
-        },
-        links: {
-            wikipedia: 'https://en.wikipedia.org/wiki/Gustavo_Ponce',
-            publications: [
-
-            ]
-        },
-        colors: [
-            "#FECC2F",
-            "#03237C",
-            "#CE132D",
-            "#1F6427"
-        ]
-    },
-    {
-        name: 'Tatiana Toro',
-        birthYear: 1964,
-        birthPlace: {
-            name: 'Colombia',
-            latLng: [4.570868, -74.297333]
-        },
-        links: {
-            wikipedia: 'https://en.wikipedia.org/wiki/Tatiana_Toro',
-            publications: [
-
-            ]
-        },
-        colors: [
-            "#FBD133",
-            "#063892",
-            "#CD1028"
-        ]
-    },
-    {
-        name: 'José Escobar',
-        birthYear: 1954,
-        birthPlace: {
-            name: 'Manizales, Colombia',
-            latLng: [5.070275, -75.513817]
-        },
-        links: {
-            wikipedia: 'https://en.wikipedia.org/wiki/Jos%C3%A9_F._Escobar',
-            publications: [
-
-            ]
-        },
-        colors: [
-            "#FBD133",
-            "#063892",
-            "#CD1028"
-        ]
-    },
-    {
-        name: 'Miriam Leiva',
-        birthYear: undefined,
-        birthPlace: {
-            name: 'Cuba',
-            latLng: [21.521757, -77.781166]
-        },
-        links: {
-            wikipedia: 'https://en.wikipedia.org/wiki/Miriam_Leiva',
-            publications: [
-
-            ]
-        },
-        colors: [
-            "#042A8E",
-            "#CE132D"
         ]
     },
     {
@@ -321,6 +227,13 @@ const slides = [
 
             ]
         },
+        keywords: [
+            {
+                word: 'mathematics education',
+                bold: true,
+                wikipedia: 'https://en.wikipedia.org/wiki/Mathematics_education'
+            }
+        ],
         colors: [
             "#042A8E",
             "#CE132D"
@@ -330,7 +243,7 @@ const slides = [
 
 export default function App() {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(2);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(4);
 
     function getPrevSlideIndex() {
         if(currentSlideIndex === 0) {
