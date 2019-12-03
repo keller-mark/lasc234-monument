@@ -1,5 +1,6 @@
 {
   "name": "lasc234-monument",
+  "homepage": "http://keller-mark.github.io/lasc234-monument",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
