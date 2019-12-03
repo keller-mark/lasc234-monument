@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { scaleLinear as d3_scaleLinear } from 'd3-scale';
 import { mouse as d3_mouse } from 'd3';
-
 import { setupCanvas, teardownCanvas } from './helpers.js';
 
 function draw(context, colors, width, height, xn, yn, x, y, px, py) {

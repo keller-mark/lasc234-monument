@@ -4,7 +4,6 @@ import { mouse as d3_mouse } from 'd3';
 import { mean as d3_mean } from 'd3-array';
 import { eig as numeric_eig } from 'numeric';
 import { identity as math_identity, subtract as math_subtract, multiply as math_multiply, transpose as math_transpose } from 'mathjs';
-
 import { setupCanvas, teardownCanvas } from './helpers.js';
 
 function argsort(a) {

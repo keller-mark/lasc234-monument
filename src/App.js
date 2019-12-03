@@ -6,6 +6,7 @@ import PCASlide from './slides/PCASlide.js';
 import InductionSlide from './slides/InductionSlide.js';
 import ConvexSlide from './slides/ConvexSlide.js';
 import DemographySlide from './slides/DemographySlide.js';
+import TimeSeriesSlide from './slides/TimeSeriesSlide.js';
 
 const slides = [
     {
@@ -213,7 +214,8 @@ const slides = [
             "#03237C",
             "#CE132D",
             "#1F6427"
-        ]
+        ],
+        slide: TimeSeriesSlide
     },
     {
         name: 'Argelia Velez-Rodriguez',
@@ -244,7 +246,7 @@ const slides = [
 
 export default function App() {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(3);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(5);
 
     function getPrevSlideIndex() {
         if(currentSlideIndex === 0) {

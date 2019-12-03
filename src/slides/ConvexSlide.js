@@ -3,7 +3,6 @@ import { scaleLinear as d3_scaleLinear } from 'd3-scale';
 import { interpolateBasis as d3_interpolateBasis } from 'd3-interpolate';
 import { line as d3_line } from 'd3-shape';
 import { mouse as d3_mouse, quantize as d3_quantize } from 'd3';
-
 import { setupCanvas, teardownCanvas } from './helpers.js';
 
 function draw(context, colors, width, height, x, y, px) {
