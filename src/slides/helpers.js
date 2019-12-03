@@ -39,4 +39,5 @@ export function teardownCanvas(canvasRef) {
     const canvas = canvasRef.current;
     const canvasSelection = d3_select(canvas);
     canvasSelection.on("mousemove", null);
+    canvasSelection.on("click", null);
 }

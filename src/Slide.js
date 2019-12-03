@@ -10,10 +10,12 @@ function getTextColor(bgColor) {
 }
 
 function getRandomColors(colors) {
-    const colorPrimary = _sample(colors);
+    // const colorPrimary = _sample(colors);
+    const colorPrimary = colors[0];
     const colorsRemaining = new Set(colors);
     colorsRemaining.delete(colorPrimary);
-    const colorSecondary = _sample(Array.from(colorsRemaining));
+    // const colorSecondary = _sample(Array.from(colorsRemaining));
+    const colorSecondary = colors[1];
     return { 
         bgPrimary: colorPrimary, 
         textPrimary: getTextColor(colorPrimary), 

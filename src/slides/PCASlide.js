@@ -59,6 +59,8 @@ function draw(context, colors, width, height, x, y, points) {
 
     // Draw points
     const pointSize = 6;
+    context.fillStyle = 'black';
+    context.strokeStyle = 'white';
     for(const [px, py] of points) {
         context.beginPath();
         context.arc(x(px), y(py), pointSize, 0, 2*Math.PI);
@@ -71,7 +73,7 @@ function draw(context, colors, width, height, x, y, points) {
 
     // Draw projected points
     const projectedPointSize = 5;
-    context.fillStyle = 'blue';
+    context.fillStyle = '#F5B42C';
     context.strokeStyle = 'black';
     for(const [px, py] of p0) {
         context.beginPath();
@@ -80,7 +82,7 @@ function draw(context, colors, width, height, x, y, points) {
         context.fill();
     }
 
-    context.fillStyle = 'red';
+    context.fillStyle = '#751F0A';
     context.strokeStyle = 'black';
     for(const [px, py] of p1) {
         context.beginPath();

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Slide from './Slide.js';
 import VectorFieldSlide from './slides/VectorFieldSlide.js';
 import PCASlide from './slides/PCASlide.js';
+import InductionSlide from './slides/InductionSlide.js';
 
 const slides = [
     {
@@ -30,8 +31,8 @@ const slides = [
             }
         ],
         colors: [
+            "#179ECF",
             "#D81027",
-            "#1280A8",
             "#D18326",
             "#E7CA2C",
             "#1AAD5A",
@@ -94,6 +95,7 @@ const slides = [
             },
             {
                 word: 'induction',
+                bold: true,
                 wikipedia: 'https://en.wikipedia.org/wiki/Inductive_reasoning'
             },
             {
@@ -105,7 +107,8 @@ const slides = [
             "#159B3D",
             "#FDDE32",
             "#032575"
-        ]
+        ],
+        slide: InductionSlide
     },
     {
         name: 'Marília Chaves Peixoto',
@@ -139,8 +142,8 @@ const slides = [
             }
         ],
         colors: [
-            "#159B3D",
             "#FDDE32",
+            "#159B3D",
             "#032575"
         ]
     },
@@ -327,7 +330,7 @@ const slides = [
 
 export default function App() {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(1);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(2);
 
     function getPrevSlideIndex() {
         if(currentSlideIndex === 0) {
