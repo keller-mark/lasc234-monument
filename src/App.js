@@ -4,7 +4,7 @@ import Slide from './Slide.js';
 import VectorFieldSlide from './slides/VectorFieldSlide.js';
 import PCASlide from './slides/PCASlide.js';
 import InductionSlide from './slides/InductionSlide.js';
-
+import ConvexSlide from './slides/ConvexSlide.js';
 import DemographySlide from './slides/DemographySlide.js';
 
 const slides = [
@@ -149,6 +149,7 @@ const slides = [
             "#159B3D",
             "#032575"
         ],
+        slide: ConvexSlide
     },
     {
         name: 'Carmen Miró',
@@ -243,7 +244,7 @@ const slides = [
 
 export default function App() {
 
-    const [currentSlideIndex, setCurrentSlideIndex] = useState(4);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(3);
 
     function getPrevSlideIndex() {
         if(currentSlideIndex === 0) {

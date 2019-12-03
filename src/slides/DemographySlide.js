@@ -36,8 +36,6 @@ const stickFigureG = (<g transform="scale(0.4)">
 
 export default function DemographySlide(props) {
 
-    const { colors } = props;
-
     const svgRef = useRef();
     const [guess, setGuess] = useState(0);
 
