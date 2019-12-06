@@ -22,7 +22,9 @@
   "scripts": {
     "build:style": "tailwind build src/index.css -o src/tailwind.css",
     "start": "yarn run build:style && react-scripts start",
-    "build": "yarn run build:style && react-scripts build"
+    "build": "yarn run build:style && react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }

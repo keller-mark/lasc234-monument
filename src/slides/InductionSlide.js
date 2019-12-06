@@ -24,6 +24,7 @@ const steps = [tex0, tex1, tex2, tex3, tex4, tex5, tex6, tex7];
 
 export default function InductionSlide(props) {
 
+    const { colors } = props;
 
     const [currStep, setCurrStep] = useState(1);
 
@@ -39,7 +40,7 @@ export default function InductionSlide(props) {
         <MathJax.Provider>
             <div className="w-full h-full">
                 {range(currStep).map(i => (
-                    <MathJax.Node formula={steps[i]} key={i} />
+                    <MathJax.Node formula={steps[i]} key={i} style={{ color: colors.textPrimary }} />
                 ))}
 
                 <div className="induction-next w-full">

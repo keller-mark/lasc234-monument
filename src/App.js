@@ -78,7 +78,7 @@ const slides = [
         ],
         slide: PCASlide
     },
-    {
+    /*{
         name: 'Newton da Costa',
         birthYear: 1929,
         birthPlace: {
@@ -112,7 +112,7 @@ const slides = [
             "#032575"
         ],
         slide: InductionSlide
-    },
+    },*/
     {
         name: 'Marília Chaves Peixoto',
         birthYear: 1921,
@@ -217,7 +217,7 @@ const slides = [
         ],
         slide: TimeSeriesSlide
     },
-    /*{
+    {
         name: 'Argelia Velez-Rodriguez',
         birthYear: 1936,
         birthPlace: {
@@ -227,7 +227,7 @@ const slides = [
         links: {
             wikipedia: 'https://en.wikipedia.org/wiki/Argelia_Velez-Rodriguez',
             publications: [
-
+                '10.1177/027046768600600332'
             ]
         },
         keywords: [
@@ -240,8 +240,9 @@ const slides = [
         colors: [
             "#042A8E",
             "#CE132D"
-        ]
-    }*/
+        ],
+        slide: InductionSlide
+    }
 ]
 
 export default function App() {
