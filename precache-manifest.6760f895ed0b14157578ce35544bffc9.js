@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "843a37c4be77444b94d7298d1ba225b5",
+    "revision": "285ed2877e856a19ce598ddcea6b9bce",
     "url": "/lasc234-monument/index.html"
   },
   {
-    "revision": "78b7d7a06e4089b0d134",
+    "revision": "07e504c7ba756ed9a330",
     "url": "/lasc234-monument/static/css/main.49af653c.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lasc234-monument/static/js/2.5261d807.chunk.js"
   },
   {
-    "revision": "78b7d7a06e4089b0d134",
-    "url": "/lasc234-monument/static/js/main.64b15c89.chunk.js"
+    "revision": "07e504c7ba756ed9a330",
+    "url": "/lasc234-monument/static/js/main.fb731cff.chunk.js"
   },
   {
     "revision": "8d382cea1f396b24730f",

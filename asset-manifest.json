@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/lasc234-monument/static/css/main.49af653c.chunk.css",
-    "main.js": "/lasc234-monument/static/js/main.64b15c89.chunk.js",
-    "main.js.map": "/lasc234-monument/static/js/main.64b15c89.chunk.js.map",
+    "main.js": "/lasc234-monument/static/js/main.fb731cff.chunk.js",
+    "main.js.map": "/lasc234-monument/static/js/main.fb731cff.chunk.js.map",
     "runtime-main.js": "/lasc234-monument/static/js/runtime-main.8d4d4bde.js",
     "runtime-main.js.map": "/lasc234-monument/static/js/runtime-main.8d4d4bde.js.map",
     "static/js/2.5261d807.chunk.js": "/lasc234-monument/static/js/2.5261d807.chunk.js",
     "static/js/2.5261d807.chunk.js.map": "/lasc234-monument/static/js/2.5261d807.chunk.js.map",
     "index.html": "/lasc234-monument/index.html",
-    "precache-manifest.dafe9671d7ec3daa6895bc89ff39e4f6.js": "/lasc234-monument/precache-manifest.dafe9671d7ec3daa6895bc89ff39e4f6.js",
+    "precache-manifest.6760f895ed0b14157578ce35544bffc9.js": "/lasc234-monument/precache-manifest.6760f895ed0b14157578ce35544bffc9.js",
     "service-worker.js": "/lasc234-monument/service-worker.js",
     "static/css/main.49af653c.chunk.css.map": "/lasc234-monument/static/css/main.49af653c.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.8d4d4bde.js",
     "static/js/2.5261d807.chunk.js",
     "static/css/main.49af653c.chunk.css",
-    "static/js/main.64b15c89.chunk.js"
+    "static/js/main.fb731cff.chunk.js"
   ]
 }

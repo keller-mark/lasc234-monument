@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lasc234-monument/precache-manifest.dafe9671d7ec3daa6895bc89ff39e4f6.js"
+  "/lasc234-monument/precache-manifest.6760f895ed0b14157578ce35544bffc9.js"
 );
 
 self.addEventListener('message', (event) => {
